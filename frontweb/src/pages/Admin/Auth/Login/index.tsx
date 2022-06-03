@@ -1,9 +1,11 @@
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import ButtonIcon from 'components/ButtonIcon';
 import { useForm } from 'react-hook-form';
-import { getTokenData, requestBackendLogin, saveAuthData } from 'util/requests';
+import { requestBackendLogin } from 'util/requests';
 import { useContext, useState } from 'react';
 import { AuthContext } from 'AuthContext';
+import { saveAuthData } from 'util/storage';
+import { getTokenData } from 'util/auth';
 
 import './styles.css';
 
@@ -14,10 +16,9 @@ type FormData = {
 
 type LocationState = {
   from: string;
-}
+};
 
 const Login = () => {
-
   const location = useLocation<LocationState>();
 
   const { from } = location.state || { from: { pathname: '/admin' } };
