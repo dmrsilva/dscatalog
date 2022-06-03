@@ -25,6 +25,14 @@ const ProductCrudCard = ({ product }: Props) => {
           ))}
         </div>
       </div>
+      <div className="product-crud-card-bottons-container">
+        <button className="btn btn-outline-danger product-crud-card-botton product-crud-card-botton-first">
+            EXCLUIR
+        </button>
+        <button className="btn btn-outline-secondary product-crud-card-botton">
+            EDITAR
+        </button>
+      </div>
     </div>
   );
 };
