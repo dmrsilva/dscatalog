@@ -25,8 +25,15 @@
   }
 
   .product-filter-container {
-      margin-left: 20px;
-      flex: 1;
-      margin-bottom: 0;
+    margin-left: 20px;
+    flex: 1;
+    margin-bottom: 0;
+  }
+
+  .product-crud-card-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
   }
 }
