@@ -8,6 +8,7 @@ import { requestBackend } from 'util/requests';
 import Pagination from 'components/Pagination';
 
 import './styles.css';
+import ProductFilter from 'components/ProductFilter';
 
 type ControlComponentsData = {
   activePage: number;
@@ -52,7 +53,7 @@ const List = () => {
             ADICIONAR
           </button>
         </Link>
-        <div className="base-card product-filter-container">Search Bar</div>
+        <ProductFilter />
       </div>
       <div className="row">
         {page?.content.map((product) => (
